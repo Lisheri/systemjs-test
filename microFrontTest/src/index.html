@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 主要是浏览器对import-map这个新特性支持较差, 因此使用的不是原生的 -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.0/dist/system.js"></script>
+  <script type="systemjs-importmap">
+    // * 如果这里不指定, 就引入不到对应的模块
+    {
+      "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
+        "react-router-dom": "https://cdn.jsdelivr.net/npm/react-router-dom@5.2.0/umd/react-router-dom.min.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // * 有了上面的system.js的依赖后, 全局下就有了System这个对象
+    // * 通过System引入index.js
+    // * 为什么要通过当前文件夹下引入, 主要是打包后, index.html这个文件和index.js这个文件, 都会被打包到build这个文件夹下, 因为他们是同级目录下的
+    System.import('./index.js')
+  </script>
+</body>
+</html>

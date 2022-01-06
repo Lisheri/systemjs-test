@@ -1,0 +1,39 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "microFrontTest",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC"
+    },
+    "prefix": "/Users/mohongen/Documents/mohongen/microFrontTest"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/mohongen/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/mohongen/Documents/mohongen/microFrontTest/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/mohongen/Documents/mohongen/microFrontTest",
+    "stage": "resolution_started"
+  },
+  "4 error pnpm": {
+    "code": "ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "@babel-loader@8.2.2 isn't supported by any available resolver.",
+      "code": "ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER",
+      "stack": "pnpm: @babel-loader@8.2.2 isn't supported by any available resolver.\n    at Object.resolve (/usr/local/Cellar/pnpm/6.23.5/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:85462:17)\n    at async run (/usr/local/Cellar/pnpm/6.23.5/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:71162:23)"
+    }
+  }
+}
