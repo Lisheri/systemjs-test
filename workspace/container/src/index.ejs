@@ -48,6 +48,7 @@
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
+  <!-- 尾逗号会报错 -->
 
   <% if (isLocal) { %>
   <script type="systemjs-importmap">
@@ -56,7 +57,8 @@
         "@study/root-config": "//localhost:9000/study-root-config.js",
         "@study/test-react-micro": "//localhost:9001/study-test-react-micro.js",
         "@study/react-todo": "//localhost:9002/study-react-todo.js",
-        "@study/realworld": "//localhost:9003/js/app.js"
+        "@study/realworld": "//localhost:9003/js/app.js",
+        "@study/navbar": "//localhost:9004/study-navbar.js"
       }
     }
   </script>

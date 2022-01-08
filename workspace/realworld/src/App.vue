@@ -1,6 +1,11 @@
 <script>
+import Parcel from "single-spa-vue/dist/esm/parcel";
+import { mountRootParcel } from 'single-spa';
 export default {
   name: "App",
+  components: {
+    Parcel
+  },
   methods: {
     handleGo(path) {
       this.$router.push(path);
@@ -10,6 +15,7 @@ export default {
     const { handleGo } = this;
     return (
       <div id="app">
+        <Parcel config={window.System.import("@study/navbar")} mountParcel={mountRootParcel} />
         <img alt="Vue logo" src={require("./assets/logo.png")} />
         <div>
           <button onClick={handleGo.bind(this, "/foo")}>狗东西Foo</button>

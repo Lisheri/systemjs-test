@@ -3,6 +3,10 @@ import { BrowserRouter, Route, Link, Redirect, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 
+// * 使用Parcel公共库, 需要先引入 single-spa-react/parcel
+// * 将 Parcel当做一个组件使用
+import Parcel from "single-spa-react/parcel";
+
 const User = () => <div>user works</div>;
 
 const routers = [
@@ -28,6 +32,7 @@ export default function Root(props) {
   console.info("搞起来");
   return (
     <BrowserRouter basename="/todo">
+      <Parcel config={System.import("@study/navbar")} />
       <div>
         <div>
           {routers.map((item, index) => (
