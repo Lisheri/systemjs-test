@@ -22,6 +22,7 @@ specifiers:
   pretty-quick: ^3.1.0
   serve: ^11.3.2
   single-spa: ^5.8.2
+  single-spa-layout: 1.3.1
   webpack: ^5.8.0
   webpack-cli: ^4.2.0
   webpack-config-single-spa: 4.0.0
@@ -32,6 +33,7 @@ dependencies:
   '@types/jest': 26.0.24
   '@types/systemjs': 6.1.1
   single-spa: 5.9.3
+  single-spa-layout: 1.3.1
 
 devDependencies:
   '@babel/core': 7.16.7
@@ -1682,6 +1684,10 @@ packages:
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
+
+  /@types/parse5/5.0.3:
+    resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
+    dev: false
 
   /@types/prettier/2.4.2:
     resolution: {integrity: sha512-ekoj4qOQYp7CvjX8ZDBgN86w3MqQhLE1hczEJbEIjgFEumDy+na/4AJAbLXfgEWFNB2pKadM5rPFtuSGMWK7xA==}
@@ -5502,7 +5508,6 @@ packages:
   /merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
-    dev: true
 
   /methods/1.1.2:
     resolution: {integrity: sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=}
@@ -5993,7 +5998,6 @@ packages:
 
   /parse5/6.0.1:
     resolution: {integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==}
-    dev: true
 
   /parseurl/1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
@@ -6864,6 +6868,15 @@ packages:
   /signal-exit/3.0.6:
     resolution: {integrity: sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==}
     dev: true
+
+  /single-spa-layout/1.3.1:
+    resolution: {integrity: sha512-I2jegJh4VHmrZL1Y496/qr9gGIHpC7wAiuIznqu+T++YxQpzNFomU3GT2a6GXZUoxbnskCMkFDk7THNkYxFOTw==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@types/parse5': 5.0.3
+      merge2: 1.4.1
+      parse5: 6.0.1
+    dev: false
 
   /single-spa/5.9.3:
     resolution: {integrity: sha512-qMGraRzIBsodV6569Fob4cQ4/yQNrcZ5Achh3SAQDljmqUtjAZ7BAA7GAyO/l5eizb7GtTmVq9Di7ORyKw82CQ==}

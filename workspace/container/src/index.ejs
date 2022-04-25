@@ -55,6 +55,7 @@
   <script type="systemjs-importmap">
     {
       "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
         "@study/root-config": "//localhost:9000/study-root-config.js",
         "@study/test-react-micro": "//localhost:9001/study-test-react-micro.js",
         "@study/react-todo": "//localhost:9002/study-react-todo.js",
@@ -84,6 +85,25 @@
   <% } %>
 </head>
 <body>
+  <!-- 路由引擎 -->
+  <template id="single-spa-layout">
+    <single-spa-router>
+      <application name="@study/navbar"></application>
+      <!-- 默认路由 -->
+      <route default>
+        <application name="@single-spa/welcome"></application>
+      </route>
+      <route path="react">
+        <application name="@study/test-react-micro"></application>
+      </route>
+      <route path="todo">
+        <application name="@study/react-todo"></application>
+      </route>
+      <route path="realworld">
+        <application name="@study/realworld"></application>
+      </route>
+    </single-spa-router>
+  </template>
   <main></main>
   <div id="myReact"></div>
   <!-- 导入微前端应用 -->
