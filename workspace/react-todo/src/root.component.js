@@ -5,7 +5,7 @@ import About from "./About";
 
 // * 使用Parcel公共库, 需要先引入 single-spa-react/parcel
 // * 将 Parcel当做一个组件使用
-import Parcel from "single-spa-react/parcel";
+// import Parcel from "single-spa-react/parcel";
 
 const User = () => <div>user works</div>;
 
@@ -33,7 +33,7 @@ export default function Root(props) {
   return (
     <BrowserRouter basename="/todo">
       <div>
-        <Parcel config={System.import("@study/navbar")} />
+        {/* <Parcel config={System.import("@study/navbar")} /> */}
         <div>
           {routers.map((item, index) => (
             <div key={index}>

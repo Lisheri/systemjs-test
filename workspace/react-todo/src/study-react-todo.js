@@ -15,7 +15,7 @@ const lifecycles = singleSpaReact({
   // * 默认情况下, 应用会被追加到body下面自动生成的一个div中
   // * 也可以手动修改, 通过使用配置项 domElementGetter
   // * 这样就可以将当前的应用添加到这个 id 为 myReact 的盒子中
-  domElementGetter: () => document.getElementById("myReact"),
+  // domElementGetter: () => document.getElementById("myReact"),
 });
 
 export const { bootstrap, mount, unmount } = lifecycles;
