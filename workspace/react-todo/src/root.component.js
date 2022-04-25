@@ -29,11 +29,11 @@ const routers = [
 
 export default function Root(props) {
   // * 这个name就是注册应用时, 传入的应用名称
-  console.info("搞起来");
+  console.info('加载');
   return (
     <BrowserRouter basename="/todo">
-      <Parcel config={System.import("@study/navbar")} />
       <div>
+        <Parcel config={System.import("@study/navbar")} />
         <div>
           {routers.map((item, index) => (
             <div key={index}>
@@ -42,16 +42,18 @@ export default function Root(props) {
           ))}
         </div>
         <Switch>
-          <>
-            {routers.map((item, index) => (
-              <Route key={index} path={item.path}>
-                {item.component}
-              </Route>
-            ))}
+          <div>
+            {
+              routers.map((item, index) => (
+                <Route key={index} path={item.path}>
+                  {item.component()}
+                </Route>
+              ))
+            }
             <Route path="/">
               <Redirect to="/home" />
             </Route>
-          </>
+          </div>
         </Switch>
       </div>
     </BrowserRouter>

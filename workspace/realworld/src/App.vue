@@ -10,9 +10,18 @@ export default {
     handleGo(path) {
       this.$router.push(path);
     },
+    async handleClick() {
+      const toolsModule = await window.System.import('@study/tools');
+      toolsModule.sayHello('@study/realworld')
+    }
+  },
+  async mounted() {
+    // 组件挂载时, 响应订阅
+    const toolsModule = await window.System.import('@study/tools');
+    toolsModule.sharedSubject.subscribe(console.log);
   },
   render() {
-    const { handleGo } = this;
+    const { handleGo, handleClick } = this;
     return (
       <div id="app">
         <Parcel config={window.System.import("@study/navbar")} mountParcel={mountRootParcel} />
@@ -20,6 +29,7 @@ export default {
         <div>
           <button onClick={handleGo.bind(this, "/foo")}>狗东西Foo</button>
           <button onClick={handleGo.bind(this, "/bar")}>狗东西Bar</button>
+          <button onClick={handleClick}>button</button>
         </div>
         <router-view></router-view>
       </div>
