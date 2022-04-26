@@ -8,10 +8,10 @@ import {
 export default function Root(props) {
   return <BrowserRouter>
     <div>
-      <Link to="/">@single-spa/welcome</Link>{"  "}
-      <Link to="/react">@study/test-react-micro</Link>{"  "}
-      <Link to="/todo">@study/react-todo</Link>{"  "}
-      <Link to="/realworld">@study/realworld</Link>{"  "}
+      <Link to="/">welcome</Link>{"  "}
+      <Link to="/react">test-react-micro</Link>{"  "}
+      <Link to="/todo">react-todo</Link>{"  "}
+      <Link to="/realworld">Vue</Link>{"  "}
     </div>
   </BrowserRouter>;
 }
