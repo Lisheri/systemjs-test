@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import actions from '@/shared/actions';
 
 // let root = null;
 const render = (props) => {
+  if (props) {
+    // * 注入props实例
+    actions.setActions(props);
+  }
   const { container } = props;
   // const root = ReactDOM.unstable_createRoot()
   ReactDOM.render(

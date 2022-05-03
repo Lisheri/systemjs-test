@@ -10,6 +10,11 @@ export const routes = [
     path: '/Home',
     component: defineAsyncComponent(() => import('@/pages/Home')),
     name: 'Home',
+  },
+  {
+    path: '/login',
+    component: defineAsyncComponent(() => import('@/pages/Login')),
+    name: 'Login'
   }
 ];
 
