@@ -1,3 +1,5 @@
+import shared from '@/shared';
+
 const microApps = [
   {
     name: 'vue1',
@@ -5,7 +7,9 @@ const microApps = [
     activeRule: '/dyAdmin',
     container: '#container', // 子应用挂载的节点
     props: {
-      routerBase: '/dyAdmin' // 下发路由给子应用，子应用根据该值去定义qiankun环境下的路由
+      routerBase: '/dyAdmin', // 下发路由给子应用，子应用根据该值去定义qiankun环境下的路由
+      // * 将shared实例下发给子应用
+      shared
     }
   },
   {
@@ -14,7 +18,8 @@ const microApps = [
     activeRule: '/react',
     container: '#reactContainer', // 子应用挂载的div
     props: {
-      routerBase: '/react'
+      routerBase: '/react',
+      shared
     }
   }
 ]

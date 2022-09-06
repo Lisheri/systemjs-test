@@ -1,5 +1,10 @@
+const path = require('path');
+
 module.exports = {
   webpack: (config) => {
+    config.resolve.alias = {
+      '@': path.resolve(__dirname, './src')
+    }
     config.output.library = 'reactApp';
     config.output.libraryTarget = 'umd';
     config.output.publicPath = "//localhost:7070/"
